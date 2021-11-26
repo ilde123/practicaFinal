@@ -1,0 +1,51 @@
+$colorAzul: #627eb7;
+$colorBlanco: #fff;
+$inline-flex: inline-flex;
+$center: center;
+
+nav {
+    display: $inline-flex;
+    flex-direction: row;
+    align-items: $center;
+    justify-content: $center;
+    width: 100%;
+    height: 100%;
+    background-color: $colorAzul;
+    padding: .5em 1em;
+    position: relative;
+    z-index: 1;
+    ul {
+        list-style: none;
+        padding: 1em;
+        margin: 0;
+        display: flexbox;
+        flex-direction: row;
+        align-items: $center;
+        justify-content: start;
+        width: 100%;
+        height: 100%;
+        background-color: $colorAzul;
+        color: $colorBlanco;
+    
+        li {
+            display: $inline-flex;
+            cursor: pointer;
+
+            a {
+                color: $colorBlanco;
+                text-decoration: none;
+                font-size: 1.2em;
+                font-weight: bold;
+                font-family: 'Courier New', Courier, monospace;
+                padding: 0.5em;
+                margin: 0.5em;
+                border-radius: .25em;
+                transition: all 0.3s ease-in-out;
+                &:hover {
+                    background-color: $colorBlanco;
+                    color: $colorAzul;
+                }
+            }
+        }
+    }
+}

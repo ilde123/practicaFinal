@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="alert alert-success" role="alert" *ngIf="status==='success'">
+        {{message}}
+    </div>
+
+    <div class="alert alert-danger" role="alert" *ngIf="status==='error'">
+        {{message}}
+    </div>
+
+    <form class="row" [formGroup]="reactiveForm">
+        <div class="col-sm-4">
+            <label class="form-label">
+                <span>Nombre</span>
+                <input type="text" class="form-control" placeholder="Introducir nombre" formControlName="nombre">
+            </label>
+        </div>
+        <div class="col-sm-4">
+            <label class="form-label">
+                <span>Salario</span>
+                <input type="number" class="form-control" placeholder="Introducir salario" formControlName="salario">
+            </label>
+        </div>
+        <div class="col-sm-4">
+            <label class="form-label">
+                <span>Edad</span>
+                <input type="number" class="form-control" placeholder="Introducir edad" formControlName="edad">
+            </label>
+        </div>
+        <div class="col-12">
+            <button type="button" class="btn btn-primary" (click)="onSubmit()"
+                [disabled]="!reactiveFormStatus.valid">Crear</button>
+        </div>
+    </form>
+</div>

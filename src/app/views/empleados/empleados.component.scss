@@ -1,0 +1,23 @@
+$backgroundColor: #627eb7;
+$color: #fff;
+
+@mixin colors() {
+    background-color: $backgroundColor;
+    color: $color;
+    font-weight: bold;
+}
+
+.container {
+    margin-top: 1em;
+}
+
+table {
+    margin-top: 1em;
+    thead {
+        @include colors()
+    }
+
+    tfoot {
+        @include colors()
+    }
+}

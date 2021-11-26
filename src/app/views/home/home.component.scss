@@ -1,0 +1,34 @@
+ol {
+    list-style: lower-roman;
+}
+
+.container {
+    margin-top: 1em;
+    
+}
+
+.flex-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    span.item{
+        display: inline-grid;
+        margin: 1em;
+        padding: 0.5em 2em;
+        border: 1px solid #000;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .flex-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 425px) {
+    .flex-container {
+        grid-template-columns: 1fr;
+    }
+
+}
